@@ -1,0 +1,28 @@
+<manifest alg="2" build="2015.0.0.309" opt="false" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" domain="gugul.cl" resolutions="1x" timestamp="1449507412850">
+  <folder name="css">
+    <file name="site_global.css" crc="4052507572"/>
+    <file name="master_a-p_g_-maestra.css" crc="3932202698" ref="index"/>
+    <file name="index.css" crc="3760060641" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="4255413929" ref="index"/>
+    <file name="museutils.js" crc="183364071" ref="index"/>
+    <file name="webpro.js" crc="3803554875" ref="index"/>
+    <file name="musewpslideshow.js" crc="242596657" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="493285861" ref="index"/>
+    <file name="touchswipe.js" crc="4038331989" ref="index"/>
+    <file name="jquery.watch.js" crc="71412426" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="1lihvpu.jpg" crc="392265718" seo="true" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="brewa2c.jpg" crc="448155784" seo="true" ref="index"/>
+    <file name="iy68hp3.jpg" crc="4189964053" seo="true" ref="index"/>
+    <file name="koybu6o.jpg" crc="3922093350" seo="true" ref="index"/>
+    <file name="71euuro.jpg" crc="355051517" seo="true" ref="index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="u277.png" crc="421421980" ref="index"/>
+    <file name="u277-r.png" crc="354634053" ref="index"/>
+  </folder>
+  <file name="index.html" crc="205896284" seo="true" mt="1449507295594" redirect="true"/>
+</manifest>

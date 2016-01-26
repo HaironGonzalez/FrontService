@@ -1,0 +1,98 @@
+#slideshowu199
+{
+	position: relative;
+}
+
+#u225
+{
+	position: absolute;
+	background-color: transparent;
+}
+
+#u236,#u234,#u226,#u228,#u230
+{
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+}
+
+#u211-4
+{
+	position: absolute;
+	-pie-box-shadow: none;
+	box-shadow: 57px 57px 57px rgba(193,39,45,0.21);
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	opacity: 0.2;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
+	text-align: center;
+	line-height: 20px;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+}
+
+#u211-4:hover
+{
+	-pie-box-shadow: none;
+	box-shadow: none;
+}
+
+#u211-4:hover::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	width: 146px;
+	height: 824px;
+	top: 0px;
+	left: 0px;
+	box-shadow: inset 0px 0px 53px rgba(255,255,255,0.5), inset 0px 0px 53px rgba(255,255,255,0.5), inset 3px 3px 4px rgba(255,255,255,0.75), inset -3px -3px 4px rgba(0,0,0,0.75);
+}
+
+#u207-3
+{
+	position: absolute;
+	-pie-box-shadow: none;
+	box-shadow: 57px 57px 57px rgba(193,39,45,0.21);
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	opacity: 0.2;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
+	color: #999999;
+	text-align: center;
+	line-height: 20px;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+}
+
+#u207-3:hover
+{
+	-pie-box-shadow: none;
+	box-shadow: none;
+}
+
+#u207-3:hover::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	width: 169px;
+	height: 824px;
+	top: 0px;
+	left: 0px;
+	box-shadow: inset 0px 0px 53px rgba(255,255,255,0.5), inset 0px 0px 53px rgba(255,255,255,0.5), inset 3px 3px 4px rgba(255,255,255,0.75), inset -3px -3px 4px rgba(0,0,0,0.75);
+}
+
+.SSFirstButton,.SSPreviousButton,.SSNextButton,.SSLastButton,.SSSlideLink,.SSCloseButton /* slideshowFreeStyle */
+{
+	cursor: pointer;
+}
+
+.SSSlideLoading /* slideshowFreeStyle */
+{
+	background: url("../images/loading.gif") no-repeat center center;
+}
+
