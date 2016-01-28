@@ -67,7 +67,7 @@
           
             
          <div>
-            <form id="form1" name="form1" action="buscador.jsp" method="get">
+            <form id="form1" name="form1" action="Resultados.jsp" method="get">
                 <p><input type="text" name="Palabra" id="user"/>
                 <input type="submit" name="submit" id="submit" value="Buscar"/></p>
                 

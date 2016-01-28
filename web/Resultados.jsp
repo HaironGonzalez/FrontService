@@ -1,9 +1,11 @@
-<%-- 
+<%--
     Document   : buscador
     Created on : 07-12-2015, 03:54:48 PM
     Author     : Rudolfaraya
 --%>
 
+<%@page import="java.util.Set"%>
+<%@page import="org.json.simple.JSONObject"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Cliente.Cliente"%>
 
@@ -18,6 +20,10 @@
     }
     
     Cliente cliente = new Cliente(palabraBuscada);
+    JSONObject Resultados = new JSONObject();
+    Resultados =cliente.getJson();
+    
+    Set<String > keys =Resultados.keySet();
     
 %>
 
@@ -28,6 +34,19 @@
         <title></title>
     </head>
     <body>
-        <h1>Solicitud Enviada correctamente al Servidor!</h1>
+      //  <%
+        //for(int i=0;Resultados.size()<3;i++){%>
+        
+        <a href="Pagina.jsp" id=3>  <%="ID: "+keys.toArray()[0]     %></a>
+       <br><br>
+       <label for="female"><%=Resultados.get(keys.toArray()[0] )%></label>
+       <br><br>
+        <%
+        
+      //  }
+        %>
+    
+    
+    
     </body>
 </html>

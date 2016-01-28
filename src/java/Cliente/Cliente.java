@@ -20,6 +20,18 @@ import org.json.simple.JSONObject;
  * @author Rudolfaraya
  */
 public class Cliente{
+
+    public String getStr() {
+        return str;
+    }
+
+    public JSONObject getJson() {
+        return json;
+    }
+ 
+    JSONObject json = new JSONObject ();
+    String str;
+    
     public Cliente(String strBusqueda) {
         
         //Comunicación con el cache
@@ -70,20 +82,38 @@ public class Cliente{
                 mensajeRecibidoIndex = (JSONObject) inIndex.readObject(); // recibe el objeto json con las respuestas a cada palabra de la busqueda
                 System.out.println("He recibido el objecto del Index");
                 
-                String[] palabrasBusqueda=strBusqueda.split("\\s+" );    // array de palabras separadas por espacios
+                String[] palabrasBusqueda=strBusqueda.split("\\s+" );    // array de palabras separadas por espacios (String Ingresado por usuario)
                
-                for(int i =0;i<palabrasBusqueda.length;i++){ 
+                
+                
+                
+                for(int i =0;i<palabrasBusqueda.length;i++){              //trabaja el Json recibido para mostrarlo en resultados.jsp
             
                     if(!palabrasBusqueda[i].contentEquals(" ")&&!palabrasBusqueda[i].contentEquals("")){
+                        String Aux = (String) mensajeRecibidoIndex.get(palabrasBusqueda[i]);
+                        String [] str2 =Aux.split(",");                     // se separan las comas quedan string pequeños de ID y Frecuencia
                         
+                        for (int j=0; j<str2.length;j++) {            
+                            String [] str3 = str2[j].split(" ");               // separo los id y frecuencia
+
+                            //System.out.println("Largo "+str2.length+" Aqui"+str3[0]+" Aqui"+str3[1]);
+                            if(json.containsKey(str3[0])){                // rebiso si json ya contiene esa id
+                                String Aux2 = (String) json.get(str3[0]);
+                                Aux2 = Aux2+","+"Palabra:"+palabrasBusqueda[i]+" F:"+str3[1];
+                                json.replace(str3[0], Aux2);
+                            }else{
+                                json.put(str3[0],"Palabra:"+palabrasBusqueda[i]+" F:"+str3[1]);
+                            }
+
+                        }
+  
                     }
-                
                 }
                 
                 
-                String str = (String) mensajeRecibidoIndex.get("p"); 
+                 //str = (String) mensajeRecibidoIndex.get("p"); 
 
-                 System.out.println(str);
+                // System.out.println(str);
                
                  outIndex.close();
                  inIndex.close();
@@ -94,6 +124,9 @@ public class Cliente{
         }
                
     }
+    
+    
+    
     public static void main(String[] args) {
         
         
